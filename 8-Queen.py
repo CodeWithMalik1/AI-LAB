@@ -39,3 +39,23 @@ def isSafe(board, row, col, n):
         j += 1
 
     return True
+
+
+# ✅ Recursive backtracking function to solve N-Queens
+def solveNQueens(board, row, n):
+    """
+    Try to place queens row by row using backtracking.
+    If a solution is found, print it.
+    """
+    if row == n:
+        printSolution(board)
+        return True
+
+    result = False
+    for col in range(n):
+        if isSafe(board, row, col, n):
+            board[row][col] = 1  # Place queen
+            result = solveNQueens(board, row + 1, n) or result
+            board[row][col] = 0  # Backtrack
+
+    return result
