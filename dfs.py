@@ -15,3 +15,14 @@ def dfs(visitedNodes, graph, node):
     if node not in visitedNodes:
         print(node, end=" ")  # Print the current node
         visitedNodes.append(node)  # Mark node as visited
+        
+        for neighbour in graph[node]:  # Visit all the neighbours
+            if neighbour not in visitedNodes:  # Check before visiting
+                dfs(visitedNodes, graph, neighbour)
+                
+                
+# Driver code
+snode = input("Enter Starting Node (A, B, C, D, or E): ").upper()
+print("RESULT:")
+print("-" * 20)
+dfs(visitedNodes, graph, snode)
