@@ -12,3 +12,6 @@ visitedNodes = []
 
 # DFS Function
 def dfs(visitedNodes, graph, node):
+    if node not in visitedNodes:
+        print(node, end=" ")  # Print the current node
+        visitedNodes.append(node)  # Mark node as visited
