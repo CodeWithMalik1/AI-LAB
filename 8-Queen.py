@@ -59,3 +59,19 @@ def solveNQueens(board, row, n):
             board[row][col] = 0  # Backtrack
 
     return result
+
+
+# ✅ Driver function
+def nQueens(n):
+    """
+    Initialize the board and trigger the solver function.
+    """
+    board = [[0] * n for _ in range(n)]
+    if not solveNQueens(board, 0, n):
+        print("No solution exists.")
+    else:
+        print("Solutions printed above.")
+
+
+# ✅ Main call to solve the N-Queens problem for N = 8
+nQueens(N)
