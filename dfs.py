@@ -6,3 +6,6 @@ graph = {
     'D': ['B', 'E'], 
     'E': ['C', 'D']
 }
+
+# List to keep track of visited nodes
+visitedNodes = []
