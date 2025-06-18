@@ -9,3 +9,6 @@ graph = {
 
 # List to keep track of visited nodes
 visitedNodes = []
+
+# DFS Function
+def dfs(visitedNodes, graph, node):
